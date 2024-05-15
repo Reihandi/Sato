@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\SapiController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\RegisterController;
@@ -17,6 +18,7 @@ Route::get('register', function () {
     return view('register');
 });
 
+
 Route::post('/post-register', [RegisterController::class, 'store']);
 Route::post('/post-login', [AuthController::class, 'postLogin']);
 Route::get('/logout', [AuthController::class, 'logout']);
@@ -26,3 +28,19 @@ Route::middleware(['auth'])->group(function(){
         return view('index');
     });
 });
+
+// Route::get('/sapi/table', function () {
+//     return view('sapi.table');
+// });
+
+// Route::get('/sapi/create', function () {
+//     return view('sapi.form');
+// });
+
+Route::get('sapi/table', [SapiController::class, 'index']);
+Route::get('sapi/create', [SapiController::class, 'create']);
+Route::post('sapi/create', [SapiController::class, 'store']);
+
+Route::get('/sapi/edit/{id}', [SapiController::class, 'edit']);
+Route::put('/sapi/edit/{id}', [SapiController::class, 'update']);
+Route::delete('/sapi/delete/{id}', [SapiController::class, 'destroy']);
