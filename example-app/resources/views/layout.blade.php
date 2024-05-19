@@ -102,12 +102,12 @@
     <script src="{{url('plugins/datatables-buttons/js/buttons.colVis.min.js')}}"></script>
     <script>
         $(function() {
-            $("#example1").DataTable({
+            $("#table_sapi").DataTable({
                 "responsive": true,
                 "lengthChange": false,
                 "autoWidth": false,
                 "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
-            }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+            }).buttons().container().appendTo('#table_sapi_wrapper .col-md-6:eq(0)');
             $('#example2').DataTable({
                 "paging": true,
                 "lengthChange": false,

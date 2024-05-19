@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PenjualanController;
 use App\Http\Controllers\SapiController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
@@ -44,3 +45,5 @@ Route::post('sapi/create', [SapiController::class, 'store']);
 Route::get('/sapi/edit/{id}', [SapiController::class, 'edit']);
 Route::put('/sapi/edit/{id}', [SapiController::class, 'update']);
 Route::delete('/sapi/delete/{id}', [SapiController::class, 'destroy']);
+
+Route::get('finansial/table', [PenjualanController::class, 'index']);

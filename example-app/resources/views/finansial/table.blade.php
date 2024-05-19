@@ -7,12 +7,12 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1 class="m-0">Data Sapi</h1>
+                        <h1 class="m-0">Table</h1>
                     </div><!-- /.col -->
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
-                            <li class="breadcrumb-item"><a href="{{ url('index') }}">Home</a></li>
-                            <li class="breadcrumb-item active">Data Sapi</li>
+                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item active">Dashboard v1</li>
                         </ol>
                     </div><!-- /.col -->
                 </div><!-- /.row -->
@@ -29,22 +29,18 @@
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body">
-                        <table id="table_sapi" class="table table-bordered table-striped">
+                        <table id="example1" class="table table-bordered table-striped">
                             <thead>
                                 <tr>
                                     <th>ID</th>
-                                    <th>Tipe</th>
-                                    <th>Status Kesehatan</th>
-                                    <th>Harga Jual</th>
-                                    <th>Harga Beli</th>
-                                    <th>Foto</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($sapi as $item)    
+                                {{-- @foreach ($something as $item)     --}}
                                 <tr>
-                                    <td>{{ $item->id}}</td>
+                                    <td>Debug</td>
+                                    {{-- <td>{{ $item->id}}</td>
                                     <td>{{ $item->tipe}}</td>
                                     <td>{{ $item->status_kesehatan}}</td>
                                     <td>{{ $item->harga_jual}}</td>
@@ -61,8 +57,8 @@
                                             </form>
                                         </div>
                                     </td>
-                                </tr>
-                                @endforeach
+                                </tr> --}}
+                                {{-- @endforeach --}}
                             </tbody>
                         </table>
                     </div>
